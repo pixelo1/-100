@@ -1,0 +1,60 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class TestGo2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int i = 2;
+		int resultA = 0;
+		int resultB = 0;
+		int resultC = 0;
+		Scanner scanner = new Scanner(System.in);
+		
+		//한줄 입력받기
+		String a = scanner.nextLine();
+		String b = scanner.nextLine();
+		
+		//문자열을 ()의 기준에 맞춰 나누어 배열에 저장
+		String[] bS = b.split("");
+		//String 을 int 형으로 변환  
+		int numA = Integer.parseInt(a);
+		//0,1,2 인덱스 지정용 
+		for (; i > -1; i--) {
+			int numB = Integer.parseInt(bS[i]);
+
+			if (i == 0) {
+				//인덱스 0 은 100의 자리
+				
+				System.out.println(numB * numA);
+
+				resultA = numB * numA * 100;
+
+			} else if (i == 1) {
+				//인덱스 1은 10의 자리
+				
+				System.out.println(numB * numA);
+
+				resultB = numB * numA * 10;
+
+			} else if (i == 2) {
+				//인덱스 2는 1의자리
+				
+				System.out.println(numB * numA);
+
+				resultC = numB * numA;
+			}
+		}
+		System.out.println(resultA + resultB + resultC);
+		scanner.close();
+		// 수를 입력받는다
+
+		// 각 자리수마다 곱하기 1의자리,10의자리,100의자리
+		// 둘중 한개만 쪼갤수있으면 가능
+		// 이후 합함
+
+		// 출력
+	}
+
+}
