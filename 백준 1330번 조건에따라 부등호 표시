@@ -1,0 +1,35 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class TestGo3 {
+
+	public static void main(String[] args)throws IOException {
+		
+		InputStream is = System.in;
+		InputStreamReader reader = new InputStreamReader(is);
+		BufferedReader br = new BufferedReader(reader);
+		//BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		// 한번에 가능
+		
+		//string 변수 생성 안하고 동시에 구분자로 분리가능
+//		StringTokenizer st = new StringTokenizer(br.readLine()," ");
+		String str = br.readLine();
+		StringTokenizer st = new StringTokenizer(str," ");
+		int n1 = Integer.parseInt(st.nextToken());
+		int n2 = Integer.parseInt(st.nextToken());
+		
+		if(n1 > n2) {
+			System.out.println(">");
+		}
+		if(n1 < n2) {
+			System.out.println("<");
+		}
+		if(n1 == n2) {
+			System.out.println("==");
+		}
+		
+}
+}
