@@ -1,0 +1,46 @@
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+public class PrintName {
+
+	public static void main(String[] args) throws Exception {
+
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		String str = br.readLine();
+		
+		StringTokenizer strT = new StringTokenizer(str," ");
+		
+		int n1 = Integer.parseInt(strT.nextToken());
+		int n2 = Integer.parseInt(strT.nextToken());
+		int n3 = Integer.parseInt(strT.nextToken());
+
+		
+		if (n1 == n2 && n1 == n3 && n1 == n2) {
+			int win1 = 10000+ n1 * 1000;
+			System.out.println(win1);
+		}
+		else if (n1 == n2 || n1 == n3 || n2 == n3) {
+			int result1 = (n1 == n2)? n1:n3;
+			
+			int win2 = 1000+result1*100;
+			System.out.println(win2);
+		}
+		else if (n1 != n2 && n1 != n3 && n1 != n2) {
+			if (n1 > n2 && n1 > n3) {
+				System.out.println(n1*100);
+			}
+			else if(n2 > n1 && n2 > n3){
+				System.out.println(n2*100);
+			}
+			else {
+				System.out.println(n3*100);
+			}
+			
+		}
+		}
+			
+		}
+
