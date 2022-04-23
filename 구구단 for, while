@@ -1,0 +1,40 @@
+package baekjoon;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
+public class test {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		InputStream is = System.in;
+		InputStreamReader reader = new InputStreamReader(is);
+		BufferedReader br = new BufferedReader(reader);
+		
+		String str = br.readLine();
+		int num = Integer.parseInt(str);
+		
+		
+//		Scanner sc = new Scanner(System.in);
+//		
+//		int num = sc.nextInt();
+		
+//		for (int i = 1; i <= 9;i++) {
+//			
+//			int multiplication = num * i;
+//			
+//			System.out.println(num + " * " + i + " = " + multiplication);
+//		}
+		int i = 1;
+		while(i <= 9) {
+			int multiplication = num * i;
+			
+			System.out.println(num + " * " + i + " = " + multiplication);
+			i++;
+		}
+	}
+
+}
